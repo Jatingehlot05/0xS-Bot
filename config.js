@@ -8,8 +8,8 @@ module.exports = {
   OWNER_NUMBER: process.env.OWNER_NUMBER || '',
   OWNER_NAME: process.env.OWNER_NAME || 'Jatin Gehlot',
   MODE: process.env.MODE || 'public',
-  WELCOME: process.env.WELCOME === 'false',
-  GOODBYE: process.env.GOODBYE === 'false',
+  WELCOME: process.env.WELCOME !== 'false',
+  GOODBYE: process.env.GOODBYE !== 'false',
   AUTO_READ: process.env.AUTO_READ === 'true',
   SUDO: process.env.SUDO ? process.env.SUDO.split(',').map(n => n.trim()) : []
 };
