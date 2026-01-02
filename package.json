@@ -1,21 +1,24 @@
 {
-  "name": "0xS Bot",
-  "version": "1.0.0",
-  "description": "Enhanced WhatsApp Bot",
+  "name": "0xs-bot",
+  "version": "2.0.0",
+  "description": "WhatsApp Bot",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node index.js",
     "session": "node session.js",
     "pair": "node session.js"
   },
   "keywords": ["whatsapp", "bot"],
-  "author": "  Jatin Gehlot",
+  "author": "0xS",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.8",
-    "dotenv": "^16.0.3",
-    "pino": "^8.11.0",
-    "qrcode-terminal": "^0.12.0",
-    "axios": "^1.4.0"
+    "dotenv": "^16.4.5",
+    "pino": "^8.19.0",
+    "axios": "^1.6.7"
   }
 }
