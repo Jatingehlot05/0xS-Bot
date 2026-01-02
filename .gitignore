@@ -3,6 +3,6 @@ node_modules/
 auth/
 auth_session/
 SESSION_ID.txt
-database.db
 *.log
 .DS_Store
+package-lock.json
