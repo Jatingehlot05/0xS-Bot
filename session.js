@@ -15,7 +15,7 @@ async function generateSession() {
     console.error('❌ No PHONE_NUMBER found!\n');
     console.log('Please set PHONE_NUMBER in environment:');
     console.log('Example: PHONE_NUMBER=919876543210\n');
-    console.log('Or edit this file and add your number at line 7\n');
+    console.log('Or edit session.js and set PHONE_NUMBER variable at the top of the file\n');
     process.exit(1);
   }
   
@@ -74,6 +74,11 @@ async function generateSession() {
         
       } catch (err) {
         console.error('❌ Error generating SESSION_ID:', err.message);
+        console.log('\n⚠️  Troubleshooting:\n');
+        console.log('1. Ensure auth_session folder has proper permissions');
+        console.log('2. Check if creds.json was created successfully');
+        console.log('3. Verify you completed WhatsApp pairing correctly');
+        console.log('4. Try deleting auth_session folder and run again\n');
         process.exit(1);
       }
     }
@@ -116,6 +121,11 @@ async function generateSession() {
         
       } catch (err) {
         console.error('❌ Error requesting pairing code:', err.message);
+        console.log('\n⚠️  Troubleshooting:\n');
+        console.log('1. Verify PHONE_NUMBER format: CountryCode + Number (e.g., 919876543210)');
+        console.log('2. No spaces, dashes, or + symbol in phone number');
+        console.log('3. Check your internet connection');
+        console.log('4. Ensure WhatsApp is not already linked to this number on too many devices\n');
         process.exit(1);
       }
     }, 3000);
