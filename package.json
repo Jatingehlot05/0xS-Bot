@@ -1,14 +1,15 @@
 {
   "name": "0xS Bot",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Enhanced WhatsApp Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "session": "node session.js"
+    "session": "node session.js",
+    "pair": "node session.js"
   },
   "keywords": ["whatsapp", "bot"],
-  "author": "Jatin Gehlot",
+  "author": "  Jatin Gehlot",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.8",
